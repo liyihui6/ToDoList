@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import '../../assets/css/todo.css'
 import 'antd/dist/antd.css';
 import { Input,Button } from 'antd';
-import Storage from '../model/storage'
+import Storage from '../../model/storage'
 
 class ToDoList extends Component {
     constructor(props){
@@ -113,7 +113,7 @@ class ToDoList extends Component {
                                         <div key={key} className="box">
                                             <input type="checkbox" checked={value.checked} onChange={this.setDid.bind(this,key)}/>
                                             {value.name}
-                                            <div className="remove"><Button onClick={this.remove.bind(this,key)}>移除</Button></div>
+                                            <div className="remove"><Button size={"small"} onClick={this.remove.bind(this,key)}>移除</Button></div>
                                         </div>
                                     )
                                 }
@@ -132,7 +132,7 @@ class ToDoList extends Component {
                                         <div key={key} className="box">
                                             <input type="checkbox" checked={!value.checked} onChange={this.setNotDid.bind(this,key)}/>
                                             {value.name}
-                                            <div className="remove"><Button onClick={this.remove.bind(this,key)}>移除</Button></div>
+                                            <div className="remove"><Button size={"small"} onClick={this.remove.bind(this,key)}>移除</Button></div>
                                         </div>
                                     )
                                 }
